@@ -1,0 +1,53 @@
+import React from "react";
+import videoSrc from "../../../assets/v1.mp4";
+import Container from "../../../components/shared/Container";
+
+const Hero = () => {
+  return (
+    <div className="w-full min-h-[80vh] relative">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
+
+      {/* Overlay text */}
+      <div
+        className="absolute inset-0 z-10 flex items-center bg-[rgba(0,20,31,0.7)]"
+        style={{
+          background:
+            "linear-gradient(90deg,rgba(0, 28, 38, 1) 0%, rgba(237, 221, 83, 0.1) 100%)",
+        }}
+      >
+        <Container className="mx-0">
+          <div className="flex flex-col items-start text-white mt-5">
+            <h1 className="text-4xl font-bold mb-2">
+              Empower Your Career with IQ Interns
+            </h1>
+            <p className="text-lg">
+              Get real-world experience with short-term, impactful remote
+              internships.
+            </p>
+            <button className="btn buttonColor px-5 rounded-none shadow-none mt-2">
+              Explore!
+            </button>
+          </div>
+        </Container>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

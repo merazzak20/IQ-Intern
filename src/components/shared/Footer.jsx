@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#003049] text-gray-300 py-5 pt-8">
+    <footer className="bg-[#00141f] text-gray-300 py-5 pt-8">
       <Container>
         <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500 pb-10">
           <div className="md:max-w-96">
@@ -62,7 +62,15 @@ const Footer = () => {
           </div>
         </div>
         <p className="pt-4 text-center text-sm pb-5">
-          Copyright {new Date().getFullYear()} © PreBuiltUI. All Right Reserved.
+          Copyright {new Date().getFullYear()} - All Right Reserved by{" "}
+          <a
+            className="text-[#007a88] font-semibold"
+            target="_blank"
+            href="https://my-portfolio-f17dc.web.app/"
+          >
+            Abdur Razzak
+          </a>
+          .
         </p>
       </Container>
     </footer>
