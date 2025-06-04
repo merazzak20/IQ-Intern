@@ -20,3 +20,12 @@ Text: #111827 (Dark Gray) */
   background: #007a88;
   color: #f9fafb;
 }
+
+.sectionTitle::after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #007a88;
+  margin-top: 10px;
+}
