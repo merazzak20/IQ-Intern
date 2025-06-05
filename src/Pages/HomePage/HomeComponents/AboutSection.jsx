@@ -32,15 +32,15 @@ const AboutSection = () => {
               experience, or boost your resume — IQ Interns is your launchpad to
               a brighter future.
             </p>
-            <button className="btn buttonColor px-5 rounded-none shadow-none mt-2">
+            <button className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2">
               Explore!
             </button>
           </div>
 
           {/* Image */}
-          <div className="w-full h-64 md:h-[50vh] overflow-hidden flex items-center justify-center">
+          <div className="w-full h-64 md:h-[50vh] overflow-hidden hidden lg:block ">
             <img
-              className="w-full h-full object-cover object-center rounded-md"
+              className="w-full h-full object-cover object-center rounded-md "
               src={about}
               alt="About Image"
             />

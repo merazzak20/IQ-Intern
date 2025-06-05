@@ -40,7 +40,7 @@ const Hero = () => {
               Get real-world experience with short-term, impactful remote
               internships.
             </p>
-            <button className="btn buttonColor px-5 rounded-none shadow-none mt-2">
+            <button className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2">
               Explore!
             </button>
           </div>

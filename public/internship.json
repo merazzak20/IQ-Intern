@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Web Development",
+    "description": "Build and design responsive websites using HTML, CSS, JavaScript, and modern frameworks.",
+    "image": "https://img.freepik.com/free-photo/programming-background-collage_23-2149901788.jpg?uid=R79276914&ga=GA1.1.207393532.1664429090&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 2,
+    "title": "Data Science",
+    "description": "Analyze data, build models, and uncover insights using tools like Python, Pandas, and SQL.",
+    "image": "https://img.freepik.com/free-photo/representation-user-experience-interface-design_23-2150169861.jpg?uid=R79276914&ga=GA1.1.207393532.1664429090&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 3,
+    "title": "Cyber Security",
+    "description": "Protect systems and data by learning ethical hacking, network security, and encryption.",
+    "image": "https://img.freepik.com/free-photo/html-css-collage-concept-with-hacker_23-2150061984.jpg?uid=R79276914&ga=GA1.1.207393532.1664429090&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing",
+    "description": "Master SEO, social media, email campaigns, and brand strategy in the digital space.",
+    "image": "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?uid=R79276914&ga=GA1.1.207393532.1664429090&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 5,
+    "title": "Machine Learning",
+    "description": "Explore algorithms and train intelligent systems with hands-on ML projects.",
+    "image": "https://img.freepik.com/free-photo/robots-analyzing-data-computer-screens_23-2151966705.jpg?uid=R79276914&ga=GA1.1.207393532.1664429090&semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 6,
+    "title": "UI/UX Design",
+    "description": "Design intuitive interfaces and craft seamless user experiences using design tools and prototyping.",
+    "image": "https://img.freepik.com/free-photo/man-working-with-computer-side-view_23-2149930994.jpg?uid=R79276914&ga=GA1.1.207393532.1664429090&semt=ais_hybrid&w=740"
+  }
+]
