@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Anika Sharma",
+    "rating": 5,
+    "date": "2023-10-01",
+    "image": "https://px-web-images6.pixpa.com/lLlWMdXI8csKLLbkcSEw2G6StDefqr8uWaadqL7vc4k/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTI1ODkxODc5LTM3OTcyMC13YXJyZW4td29uZy0yNDIyODYtdW5zcGxhc2hqcGcuanBn",
+    "feedback": "IQ Interns gave me my first real-world experience. The internship helped me boost my confidence and gain valuable project exposure!"
+  },
+  {
+    "id": 2,
+    "name": "Rahul Verma",
+    "rating": 4,
+    "date": "2023-10-01",
+    "image": "https://px-web-images6.pixpa.com/lLlWMdXI8csKLLbkcSEw2G6StDefqr8uWaadqL7vc4k/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTI1ODkxODc5LTM3OTcyMC13YXJyZW4td29uZy0yNDIyODYtdW5zcGxhc2hqcGcuanBn",
+    "feedback": "The mentors were super helpful and the tasks were challenging but fun. I learned a lot more than I expected!"
+  },
+  {
+    "id": 3,
+    "name": "Sneha Gupta",
+    "rating": 5,
+    "date": "2023-10-01",
+    "image": "https://px-web-images6.pixpa.com/lLlWMdXI8csKLLbkcSEw2G6StDefqr8uWaadqL7vc4k/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTI1ODkxODc5LTM3OTcyMC13YXJyZW4td29uZy0yNDIyODYtdW5zcGxhc2hqcGcuanBn",
+    "feedback": "Amazing experience! The projects were real and meaningful, and I could finally build a portfolio to show future employers."
+  },
+  {
+    "id": 4,
+    "name": "Mohammed Faizan",
+    "rating": 4,
+    "date": "2023-10-01",
+    "image": "https://px-web-images6.pixpa.com/lLlWMdXI8csKLLbkcSEw2G6StDefqr8uWaadqL7vc4k/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTI1ODkxODc5LTM3OTcyMC13YXJyZW4td29uZy0yNDIyODYtdW5zcGxhc2hqcGcuanBn",
+    "feedback": "I appreciated the flexibility and structure of the internship. It allowed me to work at my pace while still meeting deadlines."
+  },
+  {
+    "id": 5,
+    "name": "Priya Desai",
+    "rating": 5,
+    "date": "2023-10-01",
+    "image": "https://px-web-images6.pixpa.com/lLlWMdXI8csKLLbkcSEw2G6StDefqr8uWaadqL7vc4k/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTI1ODkxODc5LTM3OTcyMC13YXJyZW4td29uZy0yNDIyODYtdW5zcGxhc2hqcGcuanBn",
+    "feedback": "IQ Interns is the perfect launchpad for students who want to explore different career fields. Highly recommended!"
+  },
+  {
+    "id": 6,
+    "name": "Arjun Mehta",
+    "rating": 3,
+    "date": "2023-10-01",
+    "image": "https://px-web-images6.pixpa.com/lLlWMdXI8csKLLbkcSEw2G6StDefqr8uWaadqL7vc4k/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTI1ODkxODc5LTM3OTcyMC13YXJyZW4td29uZy0yNDIyODYtdW5zcGxhc2hqcGcuanBn",
+    "feedback": "I loved the communication and support throughout the internship. Definitely felt like a part of a real company team."
+  }
+]

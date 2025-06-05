@@ -3,6 +3,7 @@ import Container from "../../../components/shared/Container";
 import SectiontionTitle from "../../../components/shared/SectiontionTitle";
 import { MdVerified } from "react-icons/md";
 import { FiArrowUpRight } from "react-icons/fi";
+import Loader from "../../../components/shared/Loader";
 
 const InternshipDomain = () => {
   const [domains, setDomains] = useState([]);
@@ -26,9 +27,7 @@ const InternshipDomain = () => {
       <Container>
         <SectiontionTitle title={"Internship Domains"} />
         {loading ? (
-          <div className="text-center py-10 text-gray-500">
-            Loading internships...
-          </div>
+          <Loader></Loader>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-8 relative">
             {domains.map((d) => (
