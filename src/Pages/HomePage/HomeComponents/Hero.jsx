@@ -1,8 +1,12 @@
 import React from "react";
 import videoSrc from "../../../assets/v1.mp4";
 import Container from "../../../components/shared/Container";
+import SplitText from "../../../../reactBits/SplitText/SplitText";
 
 const Hero = () => {
+  // const handleAnimationComplete = () => {
+  //   console.log("All letters have animated!");
+  // };
   return (
     <div className="w-full min-h-[80vh] relative">
       <video
@@ -33,9 +37,24 @@ const Hero = () => {
       >
         <Container className="mx-0">
           <div className="flex flex-col items-start text-white mt-5">
-            <h1 className="text-4xl font-bold mb-2">
+            {/* title */}
+            <SplitText
+              text=" Empower Your Career with IQ Interns"
+              className="text-4xl font-bold text-center"
+              delay={100}
+              duration={0.2}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              // textAlign="center"
+              // onLetterAnimationComplete={handleAnimationComplete}
+            />
+            {/* <h1 className="text-4xl font-bold mb-2">
               Empower Your Career with IQ Interns
-            </h1>
+            </h1> */}
             <p className="text-lg">
               Get real-world experience with short-term, impactful remote
               internships.

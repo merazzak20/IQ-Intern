@@ -7,18 +7,18 @@ import Slider from "react-slick";
 
 const Testimonial = () => {
   const [feedbacks, setFeedbacks] = useState();
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("/testimonial.json")
       .then((res) => res.json())
       .then((data) => {
         setFeedbacks(data);
-        setLoading(false);
+        // setLoading(false);
       })
       .catch((error) => {
         console.log("can't load testimonial data", error);
-        setLoading(false);
+        // setLoading(false);
       });
   }, []);
 
