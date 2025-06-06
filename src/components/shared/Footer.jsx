@@ -16,25 +16,15 @@ const Footer = () => {
               />
               <p className="text-4xl font-bold">IQ Intern</p>
             </a>
-            <p className="mt-6 text-sm">
-              Lorem Ipsum has been the industry's standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+            <p className="mt-6 text-sm text-justify">
+              At IQ Interns, we believe in empowering students and fresh
+              graduates with real-world experience through impactful, short-term
+              internships. Our platform connects talented individuals with
+              industry-relevant projects, enabling them to build their skills,
+              portfolios, and confidence — all from the comfort of their homes.
             </p>
-            <div className="flex items-center gap-2 mt-4">
-              <img
-                src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/appDownload/googlePlayBtnBlack.svg"
-                alt="google play"
-                className="h-10 w-auto border border-white rounded"
-              />
-              <img
-                src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/appDownload/appleStoreBtnBlack.svg"
-                alt="app store"
-                className="h-10 w-auto border border-white rounded"
-              />
-            </div>
           </div>
-          <div className="flex-1 flex items-start md:justify-evenly gap-20 md:gap-40">
+          <div className="flex-1 flex items-start md:justify-evenly gap-20 md:gap-40 mt-4 md:mt-14">
             <div>
               <h2 className="font-semibold mb-5">Company</h2>
               <ul className="text-sm space-y-2">
@@ -70,7 +60,6 @@ const Footer = () => {
           >
             Abdur Razzak
           </a>
-          .
         </p>
       </Container>
     </footer>

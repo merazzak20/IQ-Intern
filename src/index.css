@@ -14,6 +14,7 @@ Text: #111827 (Dark Gray) */
 * {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .buttonColor {

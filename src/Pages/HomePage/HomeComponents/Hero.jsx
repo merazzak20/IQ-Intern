@@ -2,6 +2,7 @@ import React from "react";
 import videoSrc from "../../../assets/v1.mp4";
 import Container from "../../../components/shared/Container";
 import SplitText from "../../../../reactBits/SplitText/SplitText";
+import { Link } from "react-router";
 
 const Hero = () => {
   // const handleAnimationComplete = () => {
@@ -59,9 +60,11 @@ const Hero = () => {
               Get real-world experience with short-term, impactful remote
               internships.
             </p>
-            <button className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2">
-              Explore!
-            </button>
+            <a href="#contact">
+              <button className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2">
+                Contact With Us!
+              </button>
+            </a>
           </div>
         </Container>
       </div>

@@ -40,7 +40,7 @@ const AboutSection = () => {
           {/* Image */}
           <div className="w-full h-64 md:h-[50vh] overflow-hidden hidden lg:block ">
             <img
-              className="w-full h-full object-cover object-center rounded-md "
+              className="w-full h-full object-cover object-center rounded-none "
               src={about}
               alt="About Image"
             />
