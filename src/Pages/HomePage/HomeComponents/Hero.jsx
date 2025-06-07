@@ -3,6 +3,7 @@ import videoSrc from "../../../assets/v1.mp4";
 import Container from "../../../components/shared/Container";
 import SplitText from "../../../../reactBits/SplitText/SplitText";
 import { Link } from "react-router";
+import HeroCards from "./HeroCards";
 
 const Hero = () => {
   // const handleAnimationComplete = () => {
@@ -65,6 +66,10 @@ const Hero = () => {
                 Contact With Us!
               </button>
             </a>
+          </div>
+          {/* hero cards  */}
+          <div className="absolute bottom-8 right-24 hidden lg:block">
+            <HeroCards></HeroCards>
           </div>
         </Container>
       </div>

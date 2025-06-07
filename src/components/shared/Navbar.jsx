@@ -59,7 +59,7 @@ const Navbar = () => {
                 {link.name}
                 <span
                   className={`h-0.5 w-0 group-hover:w-full transition-all duration-300 ${
-                    isScrolled ? "bg-gray-700" : "bg-white"
+                    isScrolled ? "bg-[#007a88]" : "bg-white"
                   }`}
                 />
               </a>
