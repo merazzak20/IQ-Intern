@@ -1,11 +1,12 @@
 import React from "react";
 import PageHeader from "../../components/shared/PageHeader";
+import MissionVision from "./AboutComponent/MissionVission";
 
 const AboutPage = () => {
   return (
     <div>
       <PageHeader title={"About Us!"}></PageHeader>
-      <p>hello</p>
+      <MissionVision></MissionVision>
     </div>
   );
 };
