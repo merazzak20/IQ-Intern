@@ -4,15 +4,15 @@ import SectiontionTitle from "../../../components/shared/SectiontionTitle";
 
 const MissionVision = () => {
   return (
-    <div className="py-12 bg-white text-gray-800">
+    <div className="py-12">
       <Container>
         <SectiontionTitle title={"Our Mission & Vision"}></SectiontionTitle>
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 text-gray-500">
           At IQ Interns, we're committed to reshaping internship experiences for
           students across the globe.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-8">
           {/* Mission */}
           <div className=" p-6 hover:shadow-md transition">
             <h3 className="text-2xl font-semibold mb-3 text-blue-800">
