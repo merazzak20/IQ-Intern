@@ -5,9 +5,9 @@ import Container from "./Container";
 const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Products", path: "/" },
-    { name: "Contact", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Apply", path: "/apply" },
+    { name: "Contact", path: "/" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);

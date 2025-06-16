@@ -1,5 +1,6 @@
 import React from "react";
 import bg from "../../assets/sectionhead.jpg";
+import Container from "./Container";
 
 const PageHeader = ({ title }) => {
   return (
@@ -14,9 +15,11 @@ const PageHeader = ({ title }) => {
         position: "relative",
       }}
     >
-      <p className="absolute top-[50%] left-[50%] text-4xl font-black text-white">
-        {title}
-      </p>
+      <Container>
+        <div className="inline-flex justify-center items-center h-[40vh] w-full">
+          <p className="text-4xl font-black text-white">{title}</p>
+        </div>
+      </Container>
     </div>
   );
 };
