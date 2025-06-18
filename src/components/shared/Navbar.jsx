@@ -65,13 +65,13 @@ const Navbar = () => {
               </a>
             ))}
             <button
-              className={`border px-4 py-1 text-sm font-light rounded-full transition ${
+              className={`border border-[#007A88] px-4 py-1 text-sm rounded-full transition ${
                 isScrolled
-                  ? "text-black border-black"
+                  ? "text-[#007A88] border-[#007A88]"
                   : "text-white border-white"
               }`}
             >
-              New Launch
+              Place Feedback
             </button>
           </div>
 
@@ -138,8 +138,8 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <button className="border px-4 py-1 text-sm font-light rounded-full">
-            New Launch
+          <button className="border border-[#007A88] px-4 py-1 text-sm font-light rounded-full">
+            Place Feedback
           </button>
           <button className="bg-black text-white px-6 py-2 rounded-full">
             Login
