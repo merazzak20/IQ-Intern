@@ -1,7 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import videoSrc from "../../../assets/v2.mp4"; // replace with your actual path
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const sendMail = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      to_name: "IQ Intern", // Add the recipient's name here
+      reply_to: formData.email, // Reply-to email (optional)
+    };
+
+    try {
+      await emailjs
+        .send(
+          import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+          import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
+          sendMail,
+          {
+            publicKey: import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY,
+          }
+        )
+        .then(
+          () => {
+            // console.log("SUCCESS!");
+            toast.success("Mail successfully send👍");
+          },
+          (error) => {
+            // console.log("FAILED...", error.text);
+            toast.error(error.message);
+          }
+        );
+    } catch (err) {
+      toast.error(err.message);
+    }
+  };
   return (
     <div
       id="contact"
@@ -26,7 +67,7 @@ const Contact = () => {
 
       {/* Right side - Form */}
       <div className="flex items-center justify-center p-8 bg-white">
-        <form className="w-full md:w-10/12 space-y-6">
+        <form onSubmit={handleSubmit} className="w-full md:w-10/12 space-y-6">
           {/* name & email */}
           <div className="flex flex-col md:flex-row w-full gap-3">
             <div className="w-full md:w-1/2">
@@ -35,6 +76,12 @@ const Contact = () => {
               </label> */}
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                required
                 className="w-full border border-gray-300 text-gray-600 rounded-none px-4 py-2 focus:outline-none focus:ring-1 focus:ring-[#57969D]"
                 placeholder="Your Name"
               />
@@ -46,6 +93,12 @@ const Contact = () => {
               </label> */}
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                required
                 className="w-full border border-gray-300 text-gray-600 rounded-none px-4 py-2 focus:outline-none focus:ring-1 focus:ring-[#57969D]"
                 placeholder="you@example.com"
               />
@@ -59,6 +112,12 @@ const Contact = () => {
             </label> */}
             <textarea
               rows="4"
+              name="message"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              required
               className="mt-1 block w-full border border-gray-300 text-gray-600 rounded-none px-4 py-2 focus:outline-none focus:ring-1 focus:ring-[#57969D]"
               placeholder="Write your message here..."
             />

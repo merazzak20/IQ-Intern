@@ -148,7 +148,7 @@ const Navbar = () => {
         </div>
       </Container>
       <dialog id="my_modal_3" className="modal">
-        <div className="modal-box">
+        <div className="modal-box bg-white text-gray-600">
           <form method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
@@ -159,7 +159,6 @@ const Navbar = () => {
           <p className="py-4">Press ESC key or click on ✕ button to close</p>
         </div>
       </dialog>
-      ;
     </header>
   );
 };
