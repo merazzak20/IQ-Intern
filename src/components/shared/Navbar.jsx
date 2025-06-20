@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import Container from "./Container";
+import FeedbackForm from "./FeedbackForm";
 
 const Navbar = () => {
   const navLinks = [
@@ -155,8 +156,7 @@ const Navbar = () => {
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg">Hello!</h3>
-          <p className="py-4">Press ESC key or click on ✕ button to close</p>
+          <FeedbackForm></FeedbackForm>
         </div>
       </dialog>
     </header>

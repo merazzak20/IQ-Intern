@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import videoSrc from "../../../assets/v2.mp4"; // replace with your actual path
 import toast from "react-hot-toast";
+import Loader from "../../../components/shared/Loader";
 
 const Contact = () => {
+  const [loader, setLoader] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,6 +13,7 @@ const Contact = () => {
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoader(true);
     const sendMail = {
       name: formData.name,
       email: formData.email,
@@ -33,6 +36,8 @@ const Contact = () => {
           () => {
             // console.log("SUCCESS!");
             toast.success("Mail successfully send👍");
+            setFormData({ name: "", email: "", message: "" });
+            setLoader(false);
           },
           (error) => {
             // console.log("FAILED...", error.text);
@@ -127,7 +132,7 @@ const Contact = () => {
             type="submit"
             className="bg-[#007A88] cursor-pointer text-white px-6 py-2 hover:bg-[#365e63] transition"
           >
-            Send Message
+            {loader ? <Loader></Loader> : "Send Message"}
           </button>
         </form>
       </div>
