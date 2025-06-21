@@ -3,8 +3,10 @@ import emailjs from "@emailjs/browser";
 import videoSrc from "../../../assets/v2.mp4"; // replace with your actual path
 import toast from "react-hot-toast";
 import Loader from "../../../components/shared/Loader";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const Contact = () => {
+  const axiosPublic = useAxiosPublic();
   const [loader, setLoader] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -20,6 +22,11 @@ const Contact = () => {
       message: formData.message,
       to_name: "IQ Intern", // Add the recipient's name here
       reply_to: formData.email, // Reply-to email (optional)
+    };
+    const message = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
     };
 
     try {
@@ -44,6 +51,7 @@ const Contact = () => {
             toast.error(error.message);
           }
         );
+      await axiosPublic.post("/messages", message);
     } catch (err) {
       toast.error(err.message);
     }
