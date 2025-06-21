@@ -3,6 +3,7 @@ import AboutSection from "./HomeComponents/AboutSection";
 import InternshipDomain from "./HomeComponents/InternshipDomain";
 import Testimonial from "./HomeComponents/Testimonial";
 import Contact from "./HomeComponents/Contact";
+import FAQ from "./HomeComponents/FAQ";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <InternshipDomain></InternshipDomain>
       <Testimonial></Testimonial>
       <Contact></Contact>
+      <FAQ></FAQ>
     </div>
   );
 };

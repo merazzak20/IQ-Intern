@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "What is IQ Interns?",
+    "answer": "IQ Interns is a remote internship platform that offers short-term, real-world internships to help students and freshers gain hands-on experience and improve their employability."
+  },
+  {
+    "id": 2,
+    "question": "Are the internships paid or unpaid?",
+    "answer": "Most internships offered through IQ Interns are unpaid but come with verified certificates and real-world project experience that can significantly boost your resume."
+  },
+  {
+    "id": 3,
+    "question": "Who can apply for these internships?",
+    "answer": "Anyone who is a student, fresher, or early-career professional with an eagerness to learn and grow can apply. There are no strict academic requirements."
+  },
+  {
+    "id": 4,
+    "question": "What is the duration of the internship?",
+    "answer": "The standard internship duration is 1 month, with flexible working hours designed to fit around your academic or personal schedule."
+  },
+  {
+    "id": 5,
+    "question": "Will I get a certificate after completing the internship?",
+    "answer": "Yes! After successfully completing the internship and submitting your final project or report, you'll receive a verified certificate from IQ Interns."
+  },
+  {
+    "id": 6,
+    "question": "How do I apply for an internship?",
+    "answer": "You can browse available internships on our website and fill out the application form under the 'Apply' section. Once reviewed, you'll receive confirmation via email."
+  },
+  {
+    "id": 7,
+    "question": "Can I apply for more than one domain?",
+    "answer": "Yes, you can apply for multiple domains if you're interested in learning across different fields. However, we recommend focusing on one at a time for better results."
+  }
+]

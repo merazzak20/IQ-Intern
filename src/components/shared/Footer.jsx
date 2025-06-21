@@ -1,5 +1,6 @@
 import Container from "./Container";
 import logo from "../../assets/logo.png";
+import FeedbackForm from "./FeedbackForm";
 
 const Footer = () => {
   return (
@@ -40,6 +41,14 @@ const Footer = () => {
                 <li>
                   <a href="#">Privacy policy</a>
                 </li>
+                <button
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
+                  className="border border-[#007A88] px-4 py-1 text-sm font-light rounded-full"
+                >
+                  Place Feedback
+                </button>
               </ul>
             </div>
             <div>
@@ -62,6 +71,17 @@ const Footer = () => {
           </a>
         </p>
       </Container>
+      <dialog id="my_modal_3" className="modal">
+        <div className="modal-box bg-white text-gray-600">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+          <FeedbackForm></FeedbackForm>
+        </div>
+      </dialog>
     </footer>
   );
 };

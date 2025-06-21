@@ -66,14 +66,13 @@ const Navbar = () => {
               </a>
             ))}
             <button
-              onClick={() => document.getElementById("my_modal_3").showModal()}
-              className={`border border-[#007A88] px-4 py-1 text-sm rounded-full transition ${
+              className={`border border-[#007A88] px-4 py-1 text-sm cursor-pointer rounded-full transition ${
                 isScrolled
                   ? "text-[#007A88] border-[#007A88]"
                   : "text-white border-white"
               }`}
             >
-              Place Feedback
+              Verify Certificate
             </button>
           </div>
 
@@ -141,24 +140,13 @@ const Navbar = () => {
             </a>
           ))}
           <button className="border border-[#007A88] px-4 py-1 text-sm font-light rounded-full">
-            Place Feedback
+            Verify Certificate
           </button>
           <button className="bg-black text-white px-6 py-2 rounded-full">
             Login
           </button>
         </div>
       </Container>
-      <dialog id="my_modal_3" className="modal">
-        <div className="modal-box bg-white text-gray-600">
-          <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
-          <FeedbackForm></FeedbackForm>
-        </div>
-      </dialog>
     </header>
   );
 };
