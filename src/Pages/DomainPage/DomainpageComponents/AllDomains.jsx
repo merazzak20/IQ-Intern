@@ -6,7 +6,7 @@ import { MdOutlineArrowRightAlt, MdVerified } from "react-icons/md";
 import Loader from "../../../components/shared/Loader";
 import { Link } from "react-router";
 
-const InternshipDomain = () => {
+const AllDomains = () => {
   const [domains, setDomains] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -31,7 +31,7 @@ const InternshipDomain = () => {
           <Loader></Loader>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-8 relative">
-            {domains.slice(0, 3).map((d) => (
+            {domains.map((d) => (
               <div
                 key={d?.id}
                 className="bg-white shadow-md rounded-none overflow-hidden transition-transform "
@@ -48,30 +48,19 @@ const InternshipDomain = () => {
                     {d.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-2 text-justify">
-                    {d.description.slice(0, 80)}...
+                    {d.description}
                   </p>
-                  <Link
-                    to={"/domain"}
-                    className=" btn btn-sm  buttonColor border-none rounded-none shadow-none"
-                  >
+                  <button className=" btn btn-sm  buttonColor border-none rounded-none shadow-none">
                     Read More <MdOutlineArrowRightAlt className="text-lg" />
-                  </Link>
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         )}
-        <div className="text-center">
-          <Link
-            to={"/domain"}
-            className=" btn  buttonColor border-none rounded-none shadow-none mt-6 "
-          >
-            Explore All Domains
-          </Link>
-        </div>
       </Container>
     </div>
   );
 };
 
-export default InternshipDomain;
+export default AllDomains;

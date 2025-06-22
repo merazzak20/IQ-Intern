@@ -7,7 +7,7 @@ import certificate from "../../../assets/certificate.png";
 const HeroCards = () => {
   return (
     <div>
-      <div className="bg-black/70 px-8 py-5 border-r-4 border-[#007a88] grid grid-cols-4 gap-6">
+      <div className="bg-black/70 px-8 py-5 text-white border-r-4 border-[#007a88] grid grid-cols-4 gap-6">
         <div className="cardItem max-w-[100px]">
           <img
             className="max-w-[60px] mb-2"

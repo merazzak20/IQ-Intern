@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import Container from "./Container";
 import FeedbackForm from "./FeedbackForm";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Apply", path: "/apply" },
-    { name: "Contact", path: "/" },
+    { name: "Domains", path: "/domain" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -78,19 +79,9 @@ const Navbar = () => {
 
           {/* Desktop Right */}
           <div className="hidden md:flex items-center gap-4">
-            <svg
-              className={`h-6 w-6 ${isScrolled ? "text-black" : "text-white"}`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <button className="buttonColor px-6 py-2 rounded-full">
-              Login
-            </button>
+            <Link to={"apply"} className="buttonColor px-6 py-2 rounded-full">
+              Apply for Internship
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -142,9 +133,9 @@ const Navbar = () => {
           <button className="border border-[#007A88] px-4 py-1 text-sm font-light rounded-full">
             Verify Certificate
           </button>
-          <button className="bg-black text-white px-6 py-2 rounded-full">
-            Login
-          </button>
+          <Link to={"apply"} className="buttonColor px-6 py-2 rounded-full">
+            Apply for Internship
+          </Link>
         </div>
       </Container>
     </header>

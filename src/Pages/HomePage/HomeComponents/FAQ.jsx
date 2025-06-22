@@ -3,7 +3,7 @@ import Container from "../../../components/shared/Container";
 import SectiontionTitle from "../../../components/shared/SectiontionTitle";
 
 const FAQ = () => {
-  const [faqs, setFaqs] = useState([]);
+  const [faqs, setFaqs] = useState();
 
   useEffect(() => {
     fetch("/faq.json")
@@ -12,10 +12,10 @@ const FAQ = () => {
       .catch((err) => console.error("Failed to load FAQs:", err));
   }, []);
   return (
-    <div className="mx-auto">
+    <div className="my-5">
       <Container>
         <SectiontionTitle title={"Some FAQ"} />
-        <div className="join join-vertical bg-base-100 ">
+        <div className="join join-vertical bg-base-100 w-full">
           {faqs?.map((faq) => (
             <div
               key={faq?.id}

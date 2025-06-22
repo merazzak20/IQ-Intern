@@ -2,6 +2,7 @@ import React from "react";
 import Container from "../../../components/shared/Container";
 import SectiontionTitle from "../../../components/shared/SectiontionTitle";
 import about from "../../../assets/about.jpeg";
+import { Link } from "react-router";
 
 const AboutSection = () => {
   return (
@@ -32,9 +33,12 @@ const AboutSection = () => {
               experience, or boost your resume — IQ Interns is your launchpad to
               a brighter future.
             </p>
-            <button className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2">
+            <Link
+              to={"/about"}
+              className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2"
+            >
               Explore!
-            </button>
+            </Link>
           </div>
 
           {/* Image */}

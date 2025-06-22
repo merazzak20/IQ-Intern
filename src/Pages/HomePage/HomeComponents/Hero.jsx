@@ -61,11 +61,13 @@ const Hero = () => {
               Get real-world experience with short-term, impactful remote
               internships.
             </p>
-            <a href="#contact">
-              <button className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2">
-                Contact With Us!
-              </button>
-            </a>
+
+            <Link
+              to={"/contact"}
+              className="btn buttonColor px-5 border-none rounded-none shadow-none mt-2"
+            >
+              Contact With Us!
+            </Link>
           </div>
           {/* hero cards  */}
           <div className="absolute bottom-8 right-24 hidden lg:block">

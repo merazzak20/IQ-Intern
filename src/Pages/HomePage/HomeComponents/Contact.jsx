@@ -4,6 +4,7 @@ import videoSrc from "../../../assets/v2.mp4"; // replace with your actual path
 import toast from "react-hot-toast";
 import Loader from "../../../components/shared/Loader";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Contact = () => {
   const axiosPublic = useAxiosPublic();
@@ -59,7 +60,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="min-h-[60vh] grid grid-cols-1 md:grid-cols-2 overflow-hidden my-14"
+      className="min-h-[60vh] grid grid-cols-1 md:grid-cols-2 overflow-hidden"
     >
       {/* Left side - Video */}
       <div className="relative h-[300px] md:h-auto">
@@ -140,7 +141,13 @@ const Contact = () => {
             type="submit"
             className="bg-[#007A88] cursor-pointer text-white px-6 py-2 hover:bg-[#365e63] transition"
           >
-            {loader ? <Loader></Loader> : "Send Message"}
+            {loader ? (
+              <Loader></Loader>
+            ) : (
+              <div className="inline-flex items-center">
+                Send Message <FiArrowUpRight className="text-xl ml-2" />
+              </div>
+            )}
           </button>
         </form>
       </div>
