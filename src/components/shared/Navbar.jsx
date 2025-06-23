@@ -133,7 +133,7 @@ const Navbar = () => {
           <button className="border border-[#007A88] px-4 py-1 text-sm font-light rounded-full">
             Verify Certificate
           </button>
-          <Link to={"apply"} className="buttonColor px-6 py-2 rounded-full">
+          <Link to={"apply"} className="buttonColor px-6 py-2 rounded-full" onClick={() => setIsMenuOpen(false)}>
             Apply for Internship
           </Link>
         </div>
