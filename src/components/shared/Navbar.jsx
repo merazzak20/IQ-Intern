@@ -137,9 +137,9 @@ const Navbar = () => {
             Verify Certificate
           </button>
           <Link
-            onClick={() => setIsMenuOpen(false)}
-            to={"apply"}
+            to={"/apply"}
             className="buttonColor px-6 py-2 rounded-full"
+            onClick={() => setIsMenuOpen(false)}
           >
             Apply for Internship
           </Link>
