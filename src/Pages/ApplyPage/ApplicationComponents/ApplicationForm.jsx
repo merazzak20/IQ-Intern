@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Container from "../../../components/shared/Container";
 
 const ApplicationForm = () => {
   const [formData, setFormData] = useState({
@@ -28,13 +29,12 @@ const ApplicationForm = () => {
   };
 
   return (
-    <div className="py-12  min-h-screen">
-      <div className="max-w-3xl mx-auto  shadow-md rounded-xl p-8">
+    <div className=" mx-auto  shadow-md rounded-xl p-8">
+      <Container>
         <h2 className="text-2xl font-bold text-center mb-6">
           Internship Application Form
         </h2>
-
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4 max-w-4xl mx-auto">
           {/* Full Name */}
           <div>
             <label className="block font-medium mb-1">Full Name</label>
@@ -49,81 +49,118 @@ const ApplicationForm = () => {
             />
           </div>
 
-          {/* Email */}
-          <div>
-            <label className="block font-medium mb-1">Email Address</label>
-            <input
-              type="email"
-              name="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full border border-gray-300 p-3 rounded"
-              placeholder="example@mail.com"
-            />
+          {/* email + whatsapp */}
+          <div className="flex sm:flex-col md:flex-row gap-4 w-full">
+            {/* Email */}
+            <div className="w-full md:max-w-1/2">
+              <label className="block font-medium mb-1">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full border border-gray-300 p-3 rounded"
+                placeholder="example@mail.com"
+              />
+            </div>
+
+            {/* whatsapp Number */}
+            <div className="w-full md:max-w-1/2">
+              <label className="block font-medium mb-1">WhatsApp Number</label>
+              <input
+                type="tel"
+                name="phone"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full border border-gray-300 p-3 rounded"
+                placeholder="e.g. 017XXXXXXXX"
+              />
+            </div>
           </div>
 
-          {/* Phone Number */}
-          <div>
-            <label className="block font-medium mb-1">Phone Number</label>
-            <input
-              type="tel"
-              name="phone"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full border border-gray-300 p-3 rounded"
-              placeholder="e.g. 017XXXXXXXX"
-            />
+          {/* education + university */}
+          <div className="flex sm:flex-col md:flex-row gap-4 w-full">
+            {/* Education */}
+            <div className="w-full md:max-w-1/2">
+              <label className="block font-medium mb-1">Education</label>
+              <input
+                type="text"
+                name="education"
+                required
+                value={formData.education}
+                onChange={handleChange}
+                className="w-full border border-gray-300 p-3 rounded"
+                placeholder="e.g. BSc in CSE"
+              />
+            </div>
+
+            {/* University */}
+            <div className="w-full md:max-w-1/2">
+              <label className="block font-medium mb-1">University</label>
+              <input
+                type="text"
+                name="education"
+                required
+                value={formData.education}
+                onChange={handleChange}
+                className="w-full border border-gray-300 p-3 rounded"
+                placeholder="e.g. ABC University"
+              />
+            </div>
           </div>
 
-          {/* Education */}
-          <div>
-            <label className="block font-medium mb-1">Education</label>
-            <input
-              type="text"
-              name="education"
-              required
-              value={formData.education}
-              onChange={handleChange}
-              className="w-full border border-gray-300 p-3 rounded"
-              placeholder="e.g. BSc in CSE, University Name"
-            />
-          </div>
+          {/* domain + country */}
+          <div className="flex sm:flex-col md:flex-row gap-4 w-full">
+            {/* Internship Domain */}
+            <div className="w-full md:max-w-1/2">
+              <label className="block font-medium mb-1">
+                Preferred Internship Domain
+              </label>
+              <select
+                name="domain"
+                required
+                value={formData.domain}
+                onChange={handleChange}
+                className="w-full border text-gray-500 border-gray-300 p-3 rounded"
+              >
+                <option value="">Select an internship domain</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Digital Marketing">Digital Marketing</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Content Writing">Content Writing</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+              </select>
+            </div>
 
-          {/* Internship Domain */}
-          <div>
-            <label className="block font-medium mb-1">
-              Preferred Internship Domain
-            </label>
-            <select
-              name="domain"
-              required
-              value={formData.domain}
-              onChange={handleChange}
-              className="w-full border text-gray-500 border-gray-300 p-3 rounded"
-            >
-              <option value="">Select an internship domain</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Graphic Design">Graphic Design</option>
-              <option value="Digital Marketing">Digital Marketing</option>
-              <option value="Data Science">Data Science</option>
-              <option value="Content Writing">Content Writing</option>
-              <option value="UI/UX Design">UI/UX Design</option>
-            </select>
+            {/* Country */}
+            <div className="w-full md:max-w-1/2">
+              <label className="block font-medium mb-1">Country</label>
+              <input
+                type="text"
+                name="country"
+                required
+                value={formData.country}
+                onChange={handleChange}
+                className="w-full border border-gray-300 p-3 rounded"
+                placeholder="e.g. Bangladesh"
+              />
+            </div>
           </div>
 
           {/* Resume Upload */}
           <div>
-            <label className="block font-medium mb-1">
-              Upload Resume (PDF)
-            </label>
+            <label className="block font-medium mb-1">LinkedIn URL</label>
             <input
-              type="file"
-              name="resume"
-              accept=".pdf"
+              type="url"
+              name="linkedIn"
+              // accept=".pdf"
+
               onChange={handleChange}
               className="w-full border border-gray-300 p-3 rounded "
+              placeholder="LinkedIn url"
             />
           </div>
 
@@ -142,6 +179,13 @@ const ApplicationForm = () => {
             ></textarea>
           </div>
 
+          <div>
+            <label className="label">
+              <input type="checkbox" className="checkbox checkbox-accent" />
+              Accept terms & conditions
+            </label>
+          </div>
+
           {/* Submit */}
           <div className="text-center">
             <button
@@ -152,7 +196,7 @@ const ApplicationForm = () => {
             </button>
           </div>
         </form>
-      </div>
+      </Container>
     </div>
   );
 };

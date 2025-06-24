@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import toast from "react-hot-toast";
 import Loader from "./Loader";
@@ -15,7 +15,6 @@ const FeedbackForm = () => {
     rating: "",
     comments: "",
   });
-  // console.log(feedback);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +32,7 @@ const FeedbackForm = () => {
     formData.append("image", imageFile);
 
     try {
+      // upload Image
       const { data } = await axiosPublic.post(image_upload, formData);
       const imgUrl = data.data.url;
 
@@ -42,8 +42,11 @@ const FeedbackForm = () => {
         comments: feedback.comments,
         rating,
         image: imgUrl,
+        date: new Date().toISOString(),
       };
 
+      // send data in backend
+      await axiosPublic.post("/feedbacks", feedData);
       setLoader(false);
       toast.success("Feedback submission is successful.👍");
       setFeedback({ name: "", rating: "", university: "", comments: "" });
