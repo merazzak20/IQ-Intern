@@ -5,10 +5,12 @@ const ApplicationForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    phone: "",
+    whatsapp: "",
     education: "",
+    university: "",
     domain: "",
-    resume: null,
+    country: "",
+    linkedIn: "",
     message: "",
   });
 
@@ -70,7 +72,7 @@ const ApplicationForm = () => {
               <label className="block font-medium mb-1">WhatsApp Number</label>
               <input
                 type="tel"
-                name="phone"
+                name="whatsapp"
                 required
                 value={formData.phone}
                 onChange={handleChange}
@@ -101,9 +103,9 @@ const ApplicationForm = () => {
               <label className="block font-medium mb-1">University</label>
               <input
                 type="text"
-                name="education"
+                name="university"
                 required
-                value={formData.education}
+                value={formData.university}
                 onChange={handleChange}
                 className="w-full border border-gray-300 p-3 rounded"
                 placeholder="e.g. ABC University"
@@ -150,14 +152,12 @@ const ApplicationForm = () => {
             </div>
           </div>
 
-          {/* Resume Upload */}
+          {/* linkedIn */}
           <div>
             <label className="block font-medium mb-1">LinkedIn URL</label>
             <input
               type="url"
               name="linkedIn"
-              // accept=".pdf"
-
               onChange={handleChange}
               className="w-full border border-gray-300 p-3 rounded "
               placeholder="LinkedIn url"
