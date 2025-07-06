@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Container from "../../../components/shared/Container";
+import toast from "react-hot-toast";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const ApplicationForm = () => {
+  const axiosPublic = useAxiosPublic();
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -22,12 +25,39 @@ const ApplicationForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
 
-    // You can integrate backend/API submission logic here
-    alert("Application submitted successfully!");
+    const applyData = {
+      fullName: formData.fullName,
+      email: formData.email,
+      whatsapp: formData.whatsapp,
+      education: formData.education,
+      university: formData.university,
+      domain: formData.domain,
+      country: formData.country,
+      linkedIn: formData.linkedIn,
+      message: formData.message,
+    };
+
+    try {
+      await axiosPublic.post("/applications", applyData);
+      toast.success("Application successfully submited.");
+      setFormData({
+        fullName: "",
+        email: "",
+        whatsapp: "",
+        education: "",
+        university: "",
+        domain: "",
+        country: "",
+        linkedIn: "",
+        message: "",
+      });
+    } catch (err) {
+      toast.error(err.message);
+    }
   };
 
   return (
