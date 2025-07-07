@@ -5,6 +5,7 @@ import { MdOutlineArrowRightAlt, MdVerified } from "react-icons/md";
 // import { FiArrowUpRight } from "react-icons/fi";
 import Loader from "../../../components/shared/Loader";
 import { Link } from "react-router";
+import DetailModal from "../../../components/shared/DetailModal";
 
 const AllDomains = () => {
   const [domains, setDomains] = useState([]);
@@ -50,7 +51,12 @@ const AllDomains = () => {
                   <p className="text-gray-600 text-sm mb-2 text-justify">
                     {d.description}
                   </p>
-                  <button className=" btn btn-sm  buttonColor border-none rounded-none shadow-none">
+                  <button
+                    onClick={() =>
+                      document.getElementById("my_modal_4").showModal()
+                    }
+                    className=" btn btn-sm  buttonColor border-none rounded-none shadow-none"
+                  >
                     Read More <MdOutlineArrowRightAlt className="text-lg" />
                   </button>
                 </div>
@@ -59,6 +65,7 @@ const AllDomains = () => {
           </div>
         )}
       </Container>
+      <DetailModal></DetailModal>
     </div>
   );
 };

@@ -211,7 +211,11 @@ const ApplicationForm = () => {
 
           <div>
             <label className="label">
-              <input type="checkbox" className="checkbox checkbox-accent" />
+              <input
+                type="checkbox"
+                required
+                className="checkbox checkbox-accent"
+              />
               Accept terms & conditions
             </label>
           </div>
