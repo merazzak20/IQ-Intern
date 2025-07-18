@@ -1,7 +1,7 @@
 # IQ Intern
 
 ## Internship provider platform
-## html react
+## html react tailwind 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
