@@ -7,6 +7,7 @@ import ApplyPage from "../Pages/ApplyPage/ApplyPage";
 import Error from "../components/shared/Error";
 import Domains from "../Pages/DomainPage/Domains";
 import ContactPage from "../Pages/ContactPage/ContactPage";
+import Login from "../components/shared/Login";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/apply", element: <ApplyPage></ApplyPage> },
     ],
   },
+  { path: "/login", element: <Login></Login> },
 ]);
 
 export default router;
